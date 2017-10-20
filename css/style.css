@@ -6,6 +6,9 @@ body
 {
 	margin:0;
 	padding: 0;
+	font-family: 'Rubik', sans-serif;
+	font-size: 14px;
+	color: #192540;
 }
 html
 {
@@ -13,41 +16,111 @@ html
 	padding: 0;
 	font-family: 'Rubik', sans-serif;
 	font-size: 14px;
+	color: #192540;
 }
 ul,li
 {
 	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 li
 {
-	font-size: 18px;
+	font-size: 16px;
 }
 img
 {
 	width:100%;
 }
-button
+h1
+{
+	margin-top:0;
+	margin-bottom:70px;
+}
+h2
+{
+	font-size: 36px;
+	margin-top: 32px;
+	margin-bottom: 21px;
+}
+h3
+{
+	font-size: 22px;
+	font-weight: 500;
+}
+h3.blue, h2.blue
 {
 	position: relative;
-	background: #4a6dbf;
-	padding: 20px 80px;
-	color:#000;
-	font-weight: 800;
-	border-radius: 28px;
+	color:#4a6dbf;
+}
+h3.blue:before, h2.blue:before
+{
+	content:"";
+	display: block;
+	position: absolute;
+	top:-5%;
+	left:-15px;
+	width:4px;
+	border-radius: 4px;
+	height: 110%;
+	background:#4a6dbf;
 }
 section
 {
-	padding: 80px 0;
+	padding: 70px 0;
+}
+section.white
+{
+	background-image: url('../img/bg-white.png');
+	background-repeat: repeat;
+}
+section.blue
+{
+	background: #4a6dbf;
+}
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+p
+{
+	margin-bottom: 30px;
+}
+.up
+{
+	font-size:16px;
+}
+.margin-top
+{
+	margin-top:7px;
+}
+.text-up
+{
+	text-transform: uppercase;
 }
 .btn
 {
-	display: block;
 	position: relative;
 	background: #4a6dbf;
-	padding: 20px 80px;
-	color:#000;
+	padding: 15px 46px;
+	color:#fff;
 	font-weight: 800;
 	border-radius: 28px;
+}
+.btn-big
+{
+	position: relative;
+	background: #4a6dbf;
+	padding: 20px 85px;
+	color:#fff;
+	font-weight: 800;
+	border-radius: 28px;
+	z-index: 20;
+	font-size: 16px;
+}
+.pdn
+{
+	padding-top:15px;
+	padding-bottom: 15px;
 }
 .color-white
 {
@@ -56,6 +129,10 @@ section
 .color-black
 {
 	color:#000;
+}
+.color-ser
+{
+	color:#666;
 }
 .all-right
 {
@@ -74,44 +151,53 @@ section
 	background:#4a6dbf;
 }
 
+/*
+	header
+*/
+#header 
+{
+	padding: 10px 0;
+}
+/*
+	end header
+*/
+
 /* 
 	top-nav
 */
 .top-nav
 {
 	background:#4a6dbf;
+	width: 100%;
 }
 .top-nav ul
 {
+	width: 100%;
 	margin:0;
+	display: table;
 }
 .top-nav li
 {
+	display: table-cell; 
 	position: relative;
-	display: inline-block;
-	margin-left: 50px;
-}
-.top-nav li:first-child
-{
-	margin-left: 0;
 }
 .top-nav a
 {
 	position: relative;
-	display: block;
+	display: inline-block;
 	height: 100%;
-	width: 100%;
 	top:0;
 	padding: 15px 5px;
 	color: #fff;
 	font-size:14px;
 	font-weight: 800;
+	text-align: center;
 }
 .top-nav a:hover
 {
 	text-decoration: none;
 }
-.top-nav a:hover::after
+.top-nav a.bord:hover::after
 {
 	content:"";
 	display: block;
@@ -119,10 +205,278 @@ section
 	height: 3px;
 	border-radius: 3px;
 	position: absolute;
-	bottom: 1px;
+	bottom: 0;
 	left:0;
 	background:#fff;
 }
 /* 
 	end top-nav
+*/
+
+/*
+ 	slider
+*/
+	.slider
+	{
+		width: 100%;
+		padding: 0;
+	}
+	.slider img
+	{
+		display: block;
+	}
+	.slider .text
+	{
+		position: absolute;
+		top:0;
+		z-index: 2;
+		color:#fff;
+		width: 100%;
+		height:300px;
+		top:50%;
+		margin-top:-150px;
+	}
+	.slider .title
+	{
+		font-size: 36px;
+		font-weight: 400;
+		text-transform: uppercase;
+		letter-spacing: 1.8px;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	.slider .desc
+	{
+		font-size: 18px;
+		font-weight: 300;
+		letter-spacing: 0.9px;
+		text-align: center;
+		margin-bottom: 59px;
+	}
+/*
+	end slider
+*/
+
+/*
+	advantages
+*/
+	#advantages .img
+	{
+		padding: 10px;
+		border:2px solid #000;
+		border-radius: 8px;
+		margin-bottom: 15px;
+		height: 80px;
+		text-align: center;
+	}
+	#advantages .item
+	{
+		margin:20px 0px;
+	}
+	#advantages .title
+	{
+		color:#000;
+	}
+	#advantages a
+	{
+		position: relative;
+		display: block;
+	}
+	#advantages a:after
+	{
+		content: "";
+		display: block;
+		position: absolute;
+		top:0;
+		left: 0;
+		z-index: 10;
+		width:100%;
+		height: 100%;
+		background:none;
+	}
+/*
+	end advantages
+*/
+
+/*
+	main-news
+*/
+	#main-news .desc
+	{
+		position: relative;
+		background: #fff;
+		padding: 20px 10px 40px 40px;
+		color: #192540;
+		font-size: 18px;
+	}
+	#main-news .desc:hover
+	{
+		color:#4a6dbf;
+	}
+	#main-news .desc:before
+	{
+		content: "";
+		display: block;
+		position: absolute;
+		top:23px;
+		left:20px;
+		height: 50px;
+		width: 4px;
+		border-radius: 4px;
+		background: #192540;
+	}
+	#main-news .desc:hover:before
+	{
+		background:#4a6dbf;
+	}
+	#main-news .date
+	{
+		background:#4a6dbf;
+		padding: 10px;
+		color:#fff;
+		border-radius: 0 0 8px 8px;
+	}
+/*
+	end main-news
+*/
+
+/*
+	spec
+*/
+	#spec .img
+	{
+		position: relative;
+		background-image: url('../img/photo.png');
+		background-size:cover;
+		height: 360px;
+	}
+	#spec .img.active:before
+	{
+		content: "";
+		position: absolute;
+		top:0;
+		left:0;
+		width: 100%;
+		height: 100%;
+		background:rgba(74,109,191,0.65);
+	}
+	#spec .item
+	{
+		background:#fff;
+		border-left:2px solid #e4e4e4;
+		border-right:2px solid #e4e4e4;
+		border-bottom:2px solid #e4e4e4;
+		padding: 30px 70px;
+	}
+	#spec .name
+	{
+		position: relative;
+		font-size: 22px;
+		color:#192540;
+	}
+	#spec .name:before
+	{
+		content:"";
+		display: block;
+		position: absolute;
+		height: 50px;
+		width: 4px;
+		left: -25px;
+		top:5px;
+		border-radius: 4px;
+		background:#192540;
+	}
+	#spec .name.active
+	{
+		color:rgb(74,109,191);
+	}
+	#spec .name.active:before
+	{
+		background:rgb(74,109,191) ;
+	}
+	#spec .text
+	{
+		position: relative;
+		font-size: 16px;
+		color:#192540;
+
+	}
+	#spec a
+	{
+		position: relative;
+		display: block;
+	}
+	#spec a:after
+	{
+		content: "";
+		display: block;
+		position: absolute;
+		top:0;
+		left: 0;
+		z-index: 10;
+		width:100%;
+		height: 100%;
+		background:none;
+	}
+
+/*
+	end spec
+*/
+
+/*
+	spec-inner
+*/
+	#spec-inner .directions
+	{
+		display: block;
+		font-size: 22px;
+		color: #192540;
+		padding-right: 119px;
+	}
+	#spec-inner .directions li
+	{
+		display: inline-block;
+	}
+	#spec-inner .directions li:after
+	{
+		content:" /";
+	}
+	#spec-inner .directions li:last-child:after
+	{
+		content:"";
+	}
+	#spec-inner .about
+	{
+		position: relative;
+		left:29px;
+	}
+	#spec-inner .about h2
+	{
+		margin-bottom: 32px;
+	}
+	#spec-inner .about li
+	{
+		margin-bottom:30px;
+	}
+/*
+	end spec-inner
+*/
+
+
+
+
+
+
+
+
+/*
+	footer
+*/
+	#footer .phone,#header .phone
+	{
+		font-size:24px;
+	}
+	
+/*
+	end footer
 */
